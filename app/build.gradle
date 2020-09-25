@@ -1,0 +1,75 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 28
+    defaultConfig {
+        applicationId "signalcsa.or2c.com.signalcsa"
+        minSdkVersion 24
+        targetSdkVersion 28
+        versionCode 1
+        versionName "1.0"
+        testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+            exclude 'META-INF/DEPENDENCIES'
+            exclude 'META-INF/LICENSE'
+            exclude 'META-INF/LICENSE.txt'
+            exclude 'META-INF/license.txt'
+            exclude 'META-INF/NOTICE'
+            exclude 'META-INF/NOTICE.txt'
+            exclude 'META-INF/notice.txt'
+            exclude 'META-INF/ASL2.0'
+            exclude("META-INF/*.kotlin_module")
+            /*exclude 'javax/servlet/resources/web-app_2_2.dtd'
+            exclude 'javax/servlet/resources/XMLSchema.dtd'
+            exclude 'javax/servlet/resources/j2ee_1_4.xsd'*/
+    }
+}
+
+dependencies {
+    implementation fileTree(dir: 'libs', include: ['*.jar'])
+    implementation 'com.android.support:appcompat-v7:27.1.1'
+    implementation 'com.android.support.constraint:constraint-layout:1.1.3'
+    implementation 'com.android.support:design:27.1.1'
+    implementation 'android.arch.lifecycle:extensions:1.1.1'
+    testImplementation 'junit:junit:4.12'
+    androidTestImplementation 'com.android.support.test:runner:1.0.2'
+    androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.2'
+    implementation 'com.google.code.gson:gson:2.7'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    implementation 'com.nhaarman.listviewanimations:lib-core:3.1.0@aar'
+    implementation 'com.nhaarman.listviewanimations:lib-manipulation:3.1.0@aar'
+    implementation 'com.nhaarman.listviewanimations:lib-core-slh:3.1.0@aar'
+    implementation group: 'com.nineoldandroids', name: 'library', version: '2.4.0'
+    implementation 'com.balysv:material-ripple:1.0.2'
+    implementation 'com.github.johnkil.android-robototextview:robototextview:4.0.0'
+    implementation 'com.nostra13.universalimageloader:universal-image-loader:1.9.5'
+    api 'com.google.guava:guava:27.1-android'
+    implementation 'net.sitecore.android.sdk:sitecore-mobile-javascript:2.0'
+    //implementation group: 'com.android', name: 'common', version: 'r16'
+    // https://mvnrepository.com/artifact/com.atlassian.cache/atlassian-cache-api
+    //implementation group: 'com.atlassian.cache', name: 'atlassian-cache-api', version: '5.3.0'
+
+    //implementation 'com.google.api-client:google-api-client:1.30.0'
+    /*implementation group: 'com.google.api.client', name: 'google-api-client-googleapis-extensions', version: '1.4.1-beta'
+    implementation group: 'com.google.api-client', name: 'google-api-client-appengine', version: '1.30.9'*/
+    /*implementation group: 'com.google.api-client', name: 'google-api-client-android', version: '1.22.0'
+    implementation group: 'com.google.apis', name: 'google-api-services-tasks', version: 'v1-rev48-1.23.0'
+    implementation group: 'com.google.http-client', name: 'google-http-client-android', version: '1.12.0-beta'*/
+    /*implementation 'com.google.api-client:google-api-client:1.30.4'
+    implementation 'com.google.oauth-client:google-oauth-client-jetty:1.30.4'
+    implementation 'com.google.apis:google-api-services-sheets:v4-rev581-1.25.0'
+    //implementation group: 'com.google.api-client', name: 'google-api-client-android', version: '1.22.0'
+    implementation group: 'com.google.http-client', name: 'google-http-client-android', version: '1.12.0-beta'
+    //implementation group: 'com.google.api.client', name: 'google-api-client-googleapis-extensions', version: '1.4.1-beta'
+    implementation 'com.google.api-client:google-api-client-appengine:1.30.4'
+*/
+
+}
